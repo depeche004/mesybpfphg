@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ================= UBAH TAJUK BROWSER DI SINI ================= -->
+<title>Mesyuarat Pengurusan & Teknikal Farmasi JKN Pahang</title>
+<meta name="description" content="Mesyuarat Pengurusan & Teknikal Farmasi Negeri Pahang Bil. 2/2026">
+<meta name="theme-color" content="#5a101d">
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_Malaysia.svg/500px-Coat_of_arms_of_Malaysia.svg.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #4a0d18; 
+    --navy-2: #2d060e; 
+    --accent: #8b1c2b; 
+    --accent-soft: #f7e6e9; 
+    --gold: #d4af37;
+    --gold-light: #fef0c7;
+    --gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+    --ink: #1c2533;
+    --muted: #5d6b7e;
+    --line: #e2e8f0;
+    --panel: #f8fafc;
+    --card: #ffffff;
+    --wa: #25d366;
+    --font: "Plus Jakarta Sans", -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font); color: var(--ink); background: var(--panel);
+    -webkit-font-smoothing: antialiased; line-height: 1.6;
+    padding-bottom: calc(140px + env(safe-area-inset-bottom));
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; overflow: hidden; color: #fff;
+    background: linear-gradient(135deg, #2d060e 0%, #4a0d18 40%, #7a1524 80%, #2d060e 100%);
+    background-size: 200% 200%;
+    animation: heroGradient 15s ease infinite;
+    padding: 70px 0 100px;
+    border-bottom: 4px solid var(--gold);
+  }
+  @keyframes heroGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+  .hero-dots { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.8; }
+  .hero .wrap { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .logo {
+    width: 110px; height: 110px; border-radius: 50%; background: rgba(255,255,255,0.95); display: grid; place-items: center;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3); backdrop-filter: blur(10px); padding: 15px; border: 2px solid var(--gold);
+  }
+  .logo img { width: 100%; height: 100%; object-fit: contain; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px; margin-top: 32px;
+    font-size: 14px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #fce4b3;
+  }
+  .hero h1 { margin-top: 16px; font-size: clamp(28px, 5vw, 48px); line-height: 1.2; font-weight: 800; letter-spacing: -0.02em; text-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+  .hero h1 span { display: block; margin-top: 8px; font-size: 0.65em; font-weight: 600; color: #f8fafc; opacity: 0.9; }
+  .hero h1 em { font-style: normal; background: var(--gold-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; justify-content: center; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); font-size: 15px; font-weight: 600;
+    backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  .chip svg { color: var(--gold); flex: none; }
+
+  /* ---------- Tentatif ---------- */
+  .section { margin-top: -50px; position: relative; z-index: 2; scroll-margin-top: 24px; }
+  .panel { background: var(--card); border-radius: 24px; box-shadow: 0 20px 40px rgba(74, 13, 24, 0.08); padding: 32px; border: 1px solid rgba(0,0,0,0.03); }
+  .panel-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 24px; }
+  .panel-head h2 { font-size: 28px; font-weight: 800; color: var(--navy); letter-spacing: -0.01em; }
+  .panel-head .sub { font-size: 15px; color: var(--muted); margin-top: 4px; }
+
+  .tabs { display: inline-flex; background: var(--panel); border-radius: 12px; padding: 6px; gap: 6px; border: 1px solid var(--line); flex-wrap: wrap; }
+  .tab {
+    border: 0; background: transparent; font: inherit; font-size: 14.5px; font-weight: 700; color: var(--muted);
+    padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .tab:hover { color: var(--navy); }
+  .tab[aria-selected="true"] { background: var(--navy); color: #fff; box-shadow: 0 4px 12px rgba(74, 13, 24, 0.2); }
+
+  .day { display: none; animation: fadeIn 0.4s ease; }
+  .day.show { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  
+  .tl { list-style: none; position: relative; }
+  .tl::before { content: ""; position: absolute; left: 9px; top: 12px; bottom: 12px; width: 2px; background: var(--line); }
+  .tl li { position: relative; padding: 0 0 24px 38px; }
+  .tl li:last-child { padding-bottom: 0; }
+  .tl li::before {
+    content: ""; position: absolute; left: 0; top: 8px; width: 20px; height: 20px; border-radius: 50%;
+    background: #fff; border: 4px solid var(--line); transition: border-color 0.3s;
+  }
+  .tl li:hover::before { border-color: var(--gold); }
+  .tl li.key::before { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .tl .time { font-size: 14px; font-weight: 800; color: var(--accent); letter-spacing: 0.03em; text-transform: uppercase; }
+  .tl .what { font-size: 17px; font-weight: 700; color: var(--navy); margin-top: 4px; line-height: 1.4; }
+  .tl li:not(.key) .what { font-weight: 600; color: var(--ink); }
+  .tl li.key .box { background: var(--accent-soft); border-radius: 16px; padding: 18px 20px; margin-top: 10px; border-left: 4px solid var(--accent); }
+  .tl li.key .what { margin-top: 0; }
+  .tl ul { margin: 10px 0 0 20px; font-size: 15px; color: var(--ink); font-weight: 500; }
+  .tl ul li { padding: 0 0 6px 0; }
+  .tl ul li::before { display: none; }
+  .tl .tag { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; background: var(--navy); color: #fff; margin-bottom: 10px; }
+  .tl .tag.gold { background: var(--gold-grad); color: var(--navy-2); }
+  .note { margin-top: 28px; font-size: 14px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 16px; font-weight: 500; }
+
+  /* ---------- Informasi ---------- */
+  .section + .section { margin-top: 24px; }
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .info-card { border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: #fff; transition: transform 0.3s, box-shadow 0.3s; }
+  .info-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); border-color: #cbd5e1; }
+  .info-card .ih { display: flex; align-items: center; gap: 14px; }
+  .info-card .ic { width: 48px; height: 48px; border-radius: 14px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; flex: none; }
+  .info-card h3 { font-size: 18px; font-weight: 800; color: var(--navy); }
+  
+  .kv { list-style: none; margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .kv li { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--panel); border-radius: 12px; padding: 12px 16px; font-size: 15px; border: 1px solid var(--line); }
+  .kv .k { color: var(--muted); font-weight: 600; }
+  .kv .v { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--navy); text-align: right; }
+  
+  .copy {
+    flex: none; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 10px; border: 1px solid #cbd5e1; background: #fff; color: var(--navy); cursor: pointer; transition: all 0.2s;
+  }
+  .copy:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+  .copy.done { border-color: var(--wa); background: var(--wa); color: #fff; }
+  .copy .ck, .copy.done .cp { display: none; }
+  .copy.done .ck { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer { text-align: center; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .ft-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; font-size: 14px; font-weight: 700; color: var(--navy); }
+  .ft-btn { background: none; border: none; font: inherit; color: inherit; cursor: pointer; padding: 0; transition: color 0.2s; }
+  .ft-btn:hover { color: var(--accent); text-decoration: underline; }
+  .ft-links span { color: var(--line); }
+  .ft-credit { font-size: 13.5px; color: var(--muted); line-height: 1.8; }
+  .ft-credit strong { color: var(--ink); }
+
+  /* ---------- Floating dock ---------- */
+  .dock {
+    position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+    z-index: 20; max-width: calc(100% - 32px);
+    background: rgba(255,255,255,0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.5); border-radius: 24px; box-shadow: 0 20px 50px rgba(74, 13, 24, 0.15);
+    padding: 10px; display: flex; justify-content: center; gap: 6px; flex-wrap: wrap;
+  }
+  .dock-track {
+    display: flex; gap: 4px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; padding: 0 4px;
+  }
+  .dock-track::-webkit-scrollbar { display: none; }
+  .dock-btn {
+    flex: none; scroll-snap-align: start; min-width: 90px;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    border: 0; background: transparent; font: inherit; cursor: pointer; color: var(--muted);
+    padding: 12px 14px 10px; border-radius: 16px; transition: all 0.3s;
+  }
+  .dock-btn .ic {
+    width: 50px; height: 50px; border-radius: 16px; display: grid; place-items: center;
+    background: var(--panel); color: var(--navy); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 1px solid var(--line);
+  }
+  .dock-btn .lb { font-size: 13px; font-weight: 700; letter-spacing: 0.02em; transition: color 0.2s; white-space: nowrap; }
+  .dock-btn:hover .ic, .dock-btn:focus-visible .ic {
+    background: var(--gold-grad); color: var(--navy-2); transform: translateY(-8px) scale(1.1); box-shadow: 0 12px 24px rgba(212, 175, 55, 0.3); border-color: transparent;
+  }
+  .dock-btn:hover .lb, .dock-btn:focus-visible .lb { color: var(--navy); }
+  .dock-btn:active .ic { transform: scale(0.95); }
+
+  /* ---------- Modal ---------- */
+  .modal { position: fixed; inset: 0; z-index: 50; display: none; }
+  .modal.open { display: block; }
+  .backdrop { position: absolute; inset: 0; background: rgba(28, 37, 51, 0.6); backdrop-filter: blur(4px); opacity: 0; transition: opacity 0.3s ease; }
+  .modal.open .backdrop { opacity: 1; }
+  .sheet {
+    position: absolute; left: 50%; top: 50%; width: min(600px, calc(100% - 32px)); max-height: calc(100% - 48px);
+    transform: translate(-50%, -40%) scale(0.95); opacity: 0; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #fff; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+    display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(255,255,255,0.2);
+  }
+  .modal.open .sheet { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  .sheet-head { display: flex; align-items: center; gap: 16px; padding: 24px 28px 20px; border-bottom: 1px solid var(--line); background: var(--panel); }
+  .sheet-head .ic { width: 48px; height: 48px; border-radius: 14px; background: var(--gold-grad); color: var(--navy-2); display: grid; place-items: center; flex: none; box-shadow: 0 4px 12px rgba(212,175,55,0.2); }
+  .sheet-head h3 { font-size: 20px; font-weight: 800; color: var(--navy); flex: 1; }
+  .x { width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--line); background: #fff; cursor: pointer; display: grid; place-items: center; color: var(--muted); transition: all 0.2s; }
+  .x:hover { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); transform: rotate(90deg); }
+  .sheet-body { padding: 24px 28px 32px; overflow-y: auto; }
+
+  /* Modal Content Styling */
+  .folder-btn {
+    display: flex; align-items: center; gap: 16px; text-decoration: none; padding: 20px; border-radius: 16px;
+    background: var(--navy); color: #fff; transition: all 0.3s; margin-bottom: 24px;
+    box-shadow: 0 10px 20px rgba(74, 13, 24, 0.2);
+  }
+  .folder-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(74, 13, 24, 0.3); background: var(--accent); }
+  .folder-btn .icn { width: 48px; height: 48px; border-radius: 12px; background: rgba(255,255,255,0.15); display: grid; place-items: center; }
+  .folder-btn .txt { flex: 1; }
+  .folder-btn .txt h4 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+  .folder-btn .txt p { font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 500; }
+  
+  .rujukan-sec h4 { font-size: 14px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .rujukan-sec h4::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  
+  .urusetia-list { display: flex; flex-direction: column; gap: 12px; }
+  .urusetia-card { display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; transition: border-color 0.2s; }
+  .urusetia-card:hover { border-color: var(--wa); }
+  .urusetia-card .info { flex: 1; margin-right: 12px; } /* Ensures long names wrap properly */
+  .urusetia-card .info h5 { font-size: 15px; font-weight: 800; color: var(--navy); line-height: 1.4; }
+  .urusetia-card .info p { font-size: 13px; color: var(--muted); font-weight: 600; margin-top: 4px; }
+  .wa-btn { flex: none; display: inline-flex; align-items: center; gap: 8px; background: var(--wa); color: #fff; font-weight: 700; font-size: 13px; padding: 10px 16px; border-radius: 10px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: all 0.2s; }
+  .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4); }
+
+  .msg { text-align: center; padding: 20px; }
+  .msg h4 { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .msg p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+  @media (max-width: 600px) {
+    .hero { padding: 50px 0 80px; }
+    .hero h1 { font-size: 28px; }
+    .panel { padding: 24px 20px; }
+    .dock { left: 16px; right: 16px; transform: none; max-width: none; }
+    .dock-btn { min-width: 72px; }
+    .dock-btn .ic { width: 44px; height: 44px; }
+    .dock-btn .lb { font-size: 11px; }
+    .sheet { top: auto; bottom: 0; width: 100%; max-height: 90%; border-radius: 28px 28px 0 0; transform: translate(-50%, 40px); padding-bottom: env(safe-area-inset-bottom); }
+    .urusetia-card { flex-direction: column; align-items: stretch; gap: 12px; } /* Stack on small screens for long names */
+    .urusetia-card .info { margin-right: 0; text-align: center; }
+    .wa-btn { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <canvas class="hero-dots" id="heroDots" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_Malaysia.svg/500px-Coat_of_arms_of_Malaysia.svg.png" alt="Jata Negara Malaysia"></div>
+    <div class="eyebrow">Bahagian Perkhidmatan Farmasi · JKN Pahang</div>
+    
+    <h1>
+      Mesyuarat Pengurusan &amp; Teknikal Farmasi <em>2026</em>
+      <span>Negeri Pahang Bil. 2/2026</span>
+    </h1>
+    <div class="chips">
+      <span class="chip">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        26 – 28 November 2026
+      </span>
+      <span class="chip">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Bilik Mesyuarat Kesihatan Awam, JKN Pahang
+      </span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section" id="tentatif">
+    <div class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>Atur Cara Mesyuarat</h2>
+          <div class="sub">Tentatif rasmi sepanjang program berlangsung</div>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab" role="tab" aria-selected="true" data-day="d1">26 Nov · Pengurusan</button>
+          <button class="tab" role="tab" aria-selected="false" data-day="d2">27 Nov · Teknikal</button>
+          <button class="tab" role="tab" aria-selected="false" data-day="d3">28 Nov · Pembangunan</button>
+          <button class="tab" role="tab" aria-selected="false" data-day="d4">Inovasi &amp; Kreativiti</button>
+        </div>
+      </div>
+
+      <!-- Hari 1 -->
+      <div class="day show" id="d1" role="tabpanel">
+        <ol class="tl">
+          <li class="key">
+            <div class="time">2.30 – 5.00 petang</div>
+            <div class="box">
+              <span class="tag">Mesyuarat</span>
+              <div class="what">Mesyuarat Pengurusan Farmasi Bil 2/2026</div>
+              <ul>
+                <li>Perutusan Pengerusi (Dr. Mastura binti Ahmad)</li>
+                <li>Pengesahan Minit Mesyuarat Bil 1/2026</li>
+                <li>Pembentangan Perjawatan PF dan PPF Pahang</li>
+              </ul>
+            </div>
+          </li>
+          <li><div class="time">5.00 petang</div><div class="what">Minum petang &amp; bersurai</div></li>
+        </ol>
+      </div>
+
+      <!-- Hari 2 -->
+      <div class="day" id="d2" role="tabpanel">
+        <ol class="tl">
+          <li class="key">
+            <div class="time">8.30 – 10.00 pagi</div>
+            <div class="box">
+              <span class="tag gold">Mesyuarat</span>
+              <div class="what">Mesyuarat Teknikal Pegawai Farmasi (Sesi Pagi)</div>
+              <ul>
+                <li>Status Peruntukan, Kedudukan Stok &amp; Keperluan Tambahan</li>
+              </ul>
+            </div>
+          </li>
+          <li><div class="time">10.00 – 10.30 pagi</div><div class="what">Minum pagi</div></li>
+          <li class="key">
+            <div class="time">10.30 – 1.00 petang</div>
+            <div class="box">
+              <div class="what">Sambungan Mesyuarat Teknikal</div>
+              <ul>
+                <li>Pencapaian Aktiviti Farmasi Ambulatori</li>
+                <li>Pencapaian Aktiviti Farmasi Wad &amp; Pesakit Dalam</li>
+              </ul>
+            </div>
+          </li>
+          <li><div class="time">1.00 – 2.00 petang</div><div class="what">Makan tengah hari &amp; solat</div></li>
+          <li class="key">
+            <div class="time">2.00 – 5.00 petang</div>
+            <div class="box">
+              <div class="what">Sambungan Mesyuarat Teknikal (Sesi Petang)</div>
+              <ul>
+                <li>Pencapaian Aktiviti Keselamatan Pengubatan</li>
+                <li>Pencapaian Program Penggunaan Ubat Berkualiti</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Hari 3 -->
+      <div class="day" id="d3" role="tabpanel">
+        <ol class="tl">
+          <li><div class="time">8.00 – 8.30 pagi</div><div class="what">Minum pagi</div></li>
+          <li class="key">
+            <div class="time">8.30 – 11.30 pagi</div>
+            <div class="box">
+              <span class="tag">Mesyuarat</span>
+              <div class="what">Mesyuarat Pembangunan Farmasi Bil 2/2026</div>
+              <ul>
+                <li>Status Peruntukan Pembangunan BP01100 dan BP00600</li>
+                <li>Projek Rancangan Malaysia (RMK) Negeri Pahang</li>
+                <li>Status Implementasi Sistem ICT Farmasi Pahang 2026</li>
+                <li>Pembentangan Projek Pembangunan (Hosp Muadzam Shah, Jerantut, dll)</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Hari 4 -->
+      <div class="day" id="d4" role="tabpanel">
+        <ol class="tl">
+          <li class="key">
+            <div class="time">11.30 – 1.00 petang</div>
+            <div class="box">
+              <span class="tag gold">Mesyuarat</span>
+              <div class="what">Mesyuarat Inovasi dan Kreativiti Farmasi</div>
+              <ul>
+                <li>Pencapaian KPI Farmasi &amp; Laporan Kajian Penyelidikan</li>
+                <li>Pencapaian QAP Farmasi &amp; Penguatkuasaan</li>
+                <li>Pengurusan Aduan Awam &amp; Gangguan Seksual</li>
+              </ul>
+            </div>
+          </li>
+          <li><div class="time">1.00 petang</div><div class="what">Makan tengah hari &amp; solat</div></li>
+        </ol>
+      </div>
+
+      <p class="note">*Agenda tertakluk kepada perubahan oleh pihak pengurusan tertinggi dari masa ke masa.</p>
+    </div>
+  </section>
+
+  <section class="section" id="informasi">
+    <div class="panel">
+      <div class="panel-head" style="border:none; margin:0; padding:0;">
+        <div>
+          <h2>Informasi Logistik</h2>
+          <div class="sub">Kemudahan internet dan lokasi mesyuarat</div>
+        </div>
+      </div>
+
+      <div class="info-grid" style="margin-top: 24px;">
+        <!-- INFO 1: LOKASI (BARU DITAMBAH) -->
+        <div class="info-card">
+          <div class="ih">
+            <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <h3>Lokasi Mesyuarat</h3>
+          </div>
+          <ul class="kv">
+            <li>
+              <span class="k">Bilik</span>
+              <span class="v">Kesihatan Awam</span>
+            </li>
+            <li>
+              <span class="k">Aras</span>
+              <span class="v">Aras 2, JKN Pahang</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFO 2: WIFI SELATAN -->
+        <div class="info-card">
+          <div class="ih">
+            <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+            <h3>Wi-Fi Aras 2 Selatan</h3>
+          </div>
+          <ul class="kv">
+            <li>
+              <span class="k">Kata Laluan</span>
+              <span class="v" id="wifiSelatan">jknp@2022-aR2s
+                <button class="copy" type="button" data-copy="wifiSelatan" title="Salin">
+                  <svg class="cp" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                  <svg class="ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>
+                </button>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFO 3: WIFI UTARA -->
+        <div class="info-card">
+          <div class="ih">
+            <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+            <h3>Wi-Fi Aras 2 Utara</h3>
+          </div>
+          <ul class="kv">
+            <li>
+              <span class="k">Kata Laluan</span>
+              <span class="v" id="wifiUtara">jknp@2022-aR2u
+                <button class="copy" type="button" data-copy="wifiUtara" title="Salin">
+                  <svg class="cp" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                  <svg class="ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>
+                </button>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="ft-links">
+      <button class="ft-btn" data-modal="mengenai">Mengenai Projek</button> <span>&bull;</span>
+      <button class="ft-btn" data-modal="privasi">Notis Privasi</button> <span>&bull;</span>
+      <button class="ft-btn" data-modal="terma">Terma &amp; Hak Cipta</button> <span>&bull;</span>
+      <button class="ft-btn" data-modal="hubungi">Hubungi Kami</button>
+    </div>
+    <div class="ft-credit">
+      <strong>Hab Rujukan Mesyuarat Farmasi</strong> &mdash; Pusat Akses Dokumen Rasmi<br>
+      &copy; 2026 Bahagian Perkhidmatan Farmasi, JKN Pahang. Hak Cipta Terpelihara.<br>
+      Developed by Muhammad Hafizul Aniq bin Khairul Hafidz, RPh. 25588
+    </div>
+  </footer>
+</main>
+
+<!-- Floating dock -->
+<nav class="dock" aria-label="Menu utama">
+  <div class="dock-track">
+    <button class="dock-btn" data-action="pengurusan">
+      <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></span>
+      <span class="lb">Pengurusan</span>
+    </button>
+    <button class="dock-btn" data-action="teknikal">
+      <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+      <span class="lb">Teknikal</span>
+    </button>
+    <button class="dock-btn" data-action="pembangunan">
+      <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span>
+      <span class="lb">Pembangunan</span>
+    </button>
+    <button class="dock-btn" data-action="inovasi">
+      <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+      <span class="lb">Inovasi</span>
+    </button>
+    <button class="dock-btn" data-action="urusetia">
+      <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M17 21v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a4 4 0 0 1 4-4h5"/><circle cx="9" cy="8" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+      <span class="lb">Urusetia</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="backdrop" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="sheet-head">
+      <span class="ic" id="modalIcon"></span>
+      <h3 id="modalTitle"></h3>
+      <button class="x" data-close aria-label="Tutup">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="sheet-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================================
+   KONFIGURASI DATA UTAMA (UBAH PAUTAN GOOGLE DRIVE & URUSETIA DI SINI)
+   ========================================================================= */
+
+// 1. PAUTAN FOLDER MESYUARAT (TERKINI & ARKIB)
+var DATA_MESYUARAT = {
+  pengurusan: {
+    terkini: "PAUTAN_DRIVE_PENGURUSAN_BIL_2_2026",
+    arkib: [
+      { nama: "Bil. 1/2026", link: "https://drive.google.com/drive/folders/18TwXUx5Kz29w14tpRpMh6aNtSxVnGPh0?usp=drive_link" },
+      { nama: "Bil. 2/2025", link: "https://drive.google.com/drive/folders/1I4Di6ITso8Pj31nK307yyL2Gp_TDfk0z?usp=sharing" }
+    ]
+  },
+  teknikal: {
+    terkini: "PAUTAN_DRIVE_TEKNIKAL_BIL_2_2026",
+    arkib: [
+      { nama: "Bil. 1/2026", link: "https://drive.google.com/drive/folders/1VTET9iRB_CLLVQfTETwPtY-7hYs5MFZD?usp=drive_link" },
+      { nama: "Bil. 2/2025", link: "https://drive.google.com/drive/folders/1-gkHRJUoaBAPu3depgVmU63PjSIsN0e4?usp=drive_link" }
+    ]
+  },
+  pembangunan: {
+    terkini: "PAUTAN_DRIVE_PEMBANGUNAN_BIL_2_2026",
+    arkib: [
+      { nama: "Bil. 1/2026", link: "https://drive.google.com/drive/folders/1_Z7sf0zEdpP9GHRNdwWMDfE2pESqBfxO?usp=drive_link" },
+      { nama: "Bil. 2/2025", link: "https://drive.google.com/drive/folders/1M-ZxaUdKFav9kfGQVni5RCeP2mKZzKah?usp=drive_link" }
+    ]
+  },
+  inovasi: {
+    terkini: "PAUTAN_DRIVE_INOVASI_BIL_2_2026",
+    arkib: [
+      { nama: "Bil. 1/2026", link: "https://drive.google.com/drive/folders/1jVzXZwpUNlUb4ZjgQVZD0MjGG6IzhMSF?usp=drive_link" },
+      { nama: "Bil. 2/2025", link: "https://drive.google.com/drive/folders/1MzLbEqC8XIp0URKtgqDwBZ4gBfvVhAVf?usp=drive_link" }
+    ]
+  }
+};
+
+// 2. MAKLUMAT URUSETIA (NAMA PENUH)
+var URUSETIA = [
+  { unit: "Urus Setia Mesyuarat Pengurusan Farmasi Negeri Pahang", nama: "Pn. Juliana", tel: "60129321009" },
+  { unit: "Urus Setia Mesyuarat Teknikal Pegawai Farmasi Negeri Pahang", nama: "En. Rahmat", tel: "60139270358" },
+  { unit: "Urus Setia Mesyuarat Pembangunan Farmasi Negeri Pahang", nama: "En. Prasyaanth", tel: "60146060618" },
+  { unit: "Urus Setia Mesyuarat Inovasi dan Kreativiti Farmasi Negeri Pahang", nama: "En. Azzim", tel: "60179171610" }
+];
+/* ========================================================================= */
+
+/* FUNGSI APLIKASI */
+(function () {
+  var modal = document.getElementById('modal');
+  var titleEl = document.getElementById('modalTitle');
+  var iconEl = document.getElementById('modalIcon');
+  var bodyEl = document.getElementById('modalBody');
+
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+
+  function renderFolderUI(dataMesy) {
+    var html = '<a href="' + esc(dataMesy.terkini) + '" target="_blank" class="folder-btn">' +
+      '<div class="icn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>' +
+      '<div class="txt"><h4>Folder Mesyuarat Terkini</h4><p>Akses dokumen rujukan mesyuarat</p></div>' +
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a>';
+    
+    if(dataMesy.arkib && dataMesy.arkib.length > 0) {
+      html += '<div class="rujukan-sec"><h4>Rujukan Terdahulu</h4></div><div class="urusetia-list">';
+      dataMesy.arkib.forEach(function(arkib) {
+        html += '<a href="' + esc(arkib.link) + '" target="_blank" class="urusetia-card" style="text-decoration:none;">' +
+          '<div class="info"><h5>' + esc(arkib.nama) + '</h5></div>' +
+          '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>';
+      });
+      html += '</div>';
+    }
+    return html;
+  }
+
+  function renderUrusetia() {
+    var html = '<div class="urusetia-list">';
+    URUSETIA.forEach(function(u) {
+      var waLink = 'https://wa.me/' + u.tel + '?text=' + encodeURIComponent('Salam ' + u.nama + ', saya perlukan bantuan mengenai ' + u.unit);
+      html += '<div class="urusetia-card">' +
+        '<div class="info"><h5>' + esc(u.unit) + '</h5><p>' + esc(u.nama) + '</p></div>' +
+        '<a href="' + waLink + '" target="_blank" class="wa-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.46 9.48-9.46 2.53 0 4.9.99 6.69 2.78a9.4 9.4 0 0 1 2.77 6.69c0 5.22-4.25 9.46-9.46 9.46zm8.05-17.51A11.32 11.32 0 0 0 12.04.66C5.77.66.66 5.76.66 12.03c0 2 .52 3.96 1.52 5.68L.57 23.5l5.92-1.55a11.37 11.37 0 0 0 5.54 1.41h.01c6.27 0 11.37-5.1 11.38-11.37 0-3.04-1.18-5.9-3.33-8.05z"/></svg>WhatsApp</a>' +
+        '</div>';
+    });
+    return html + '</div>';
+  }
+
+  function open(title, iconHTML, html) {
+    titleEl.textContent = title;
+    iconEl.innerHTML = iconHTML;
+    bodyEl.innerHTML = html;
+    modal.classList.add('open');
+  }
+  function close() { modal.classList.remove('open'); }
+  modal.addEventListener('click', function (e) { if (e.target.closest('[data-close]')) close(); });
+
+  // Dock Actions
+  document.querySelectorAll('.dock-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var act = btn.dataset.action, icon = btn.querySelector('.ic').innerHTML;
+      if(act === 'pengurusan') open('Mesy. Pengurusan', icon, renderFolderUI(DATA_MESYUARAT.pengurusan));
+      else if(act === 'teknikal') open('Mesy. Teknikal', icon, renderFolderUI(DATA_MESYUARAT.teknikal));
+      else if(act === 'pembangunan') open('Mesy. Pembangunan', icon, renderFolderUI(DATA_MESYUARAT.pembangunan));
+      else if(act === 'inovasi') open('Mesy. Inovasi', icon, renderFolderUI(DATA_MESYUARAT.inovasi));
+      else if(act === 'urusetia') open('Hubungi Urusetia', icon, renderUrusetia());
+    });
+  });
+
+  // Footer Actions (Pop-up)
+  document.querySelectorAll('.ft-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var act = btn.dataset.modal;
+      var icon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>';
+      
+      if (act === 'mengenai') {
+        open('Mengenai Projek', icon, '<div class="msg"><p>Sistem Hab Rujukan Mesyuarat ini dibangunkan untuk memudahkan akses ahli mesyuarat kepada minit, maklum balas, slaid pembentangan dan rujukan fail secara berpusat (paperless).</p></div>');
+      } else if (act === 'privasi') {
+        open('Notis Privasi', icon, '<div class="msg"><h4>Dokumen Sulit</h4><p>Segala dokumen yang dimuat naik dan dipautkan di dalam sistem ini adalah <strong>SULIT</strong> dan eksklusif untuk rujukan dalaman Bahagian Perkhidmatan Farmasi, JKN Pahang sahaja. Penyebaran pautan tanpa kebenaran adalah dilarang.</p></div>');
+      } else if (act === 'terma') {
+        open('Terma & Hak Cipta', icon, '<div class="msg"><p>Segala reka bentuk dan susun atur kandungan adalah tertakluk kepada Hak Cipta Terpelihara &copy; 2026 Bahagian Perkhidmatan Farmasi, Jabatan Kesihatan Negeri Pahang.</p></div>');
+      } else if (act === 'hubungi') {
+        var callIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+        open('Hubungi Kami', callIcon, renderUrusetia());
+      }
+    });
+  });
+
+  // Copy Wifi
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var text = document.getElementById(b.dataset.copy).textContent.trim();
+      navigator.clipboard.writeText(text);
+      b.classList.add('done');
+      setTimeout(function () { b.classList.remove('done'); }, 2000);
+    });
+  });
+
+  // Tabs
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+      document.querySelectorAll('.day').forEach(function (d) { d.classList.toggle('show', d.id === t.dataset.day); });
+    });
+  });
+})();
+</script>
+<script>
+// Moving background dots
+(function () {
+  var canvas = document.getElementById('heroDots'), hero = canvas.parentElement, ctx = canvas.getContext('2d');
+  var COLORS = ['212,175,55', '252,246,186', '139,28,43'], LINK = 150, dots = [], w, h;
+  function resize() {
+    w = hero.clientWidth; h = hero.clientHeight;
+    canvas.width = w; canvas.height = h;
+    while (dots.length < 40) {
+      var a = Math.random() * Math.PI * 2, sp = 0.2 + Math.random() * 0.4;
+      dots.push({ x: Math.random() * w, y: Math.random() * h, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, r: 1.5 + Math.random() * 2, c: COLORS[Math.floor(Math.random() * 3)], a: 0.3 + Math.random() * 0.5, tw: Math.random() * Math.PI * 2 });
+    }
+  }
+  function step() {
+    ctx.clearRect(0, 0, w, h);
+    dots.forEach(function (d, i) {
+      d.x += d.vx; d.y += d.vy; d.tw += 0.02;
+      if (d.x < -10) d.x = w + 10; else if (d.x > w + 10) d.x = -10;
+      if (d.y < -10) d.y = h + 10; else if (d.y > h + 10) d.y = -10;
+      for (var j = i + 1; j < dots.length; j++) {
+        var q = dots[j], dx = d.x - q.x, dy = d.y - q.y, dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < LINK) { ctx.strokeStyle = 'rgba(212,175,55,' + (0.15 * (1 - dist / LINK)) + ')'; ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
+      }
+      ctx.fillStyle = 'rgba(' + d.c + ',' + (d.a * (0.8 + 0.2 * Math.sin(d.tw))) + ')';
+      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fill();
+    });
+    requestAnimationFrame(step);
+  }
+  resize(); step(); window.addEventListener('resize', resize);
+})();
+</script>
+</body>
+</html>
+
