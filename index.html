@@ -209,7 +209,7 @@
   .urusetia-list { display: flex; flex-direction: column; gap: 12px; }
   .urusetia-card { display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; transition: border-color 0.2s; }
   .urusetia-card:hover { border-color: var(--wa); }
-  .urusetia-card .info { flex: 1; margin-right: 12px; } /* Ensures long names wrap properly */
+  .urusetia-card .info { flex: 1; margin-right: 12px; }
   .urusetia-card .info h5 { font-size: 15px; font-weight: 800; color: var(--navy); line-height: 1.4; }
   .urusetia-card .info p { font-size: 13px; color: var(--muted); font-weight: 600; margin-top: 4px; }
   .wa-btn { flex: none; display: inline-flex; align-items: center; gap: 8px; background: var(--wa); color: #fff; font-weight: 700; font-size: 13px; padding: 10px 16px; border-radius: 10px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: all 0.2s; }
@@ -228,7 +228,7 @@
     .dock-btn .ic { width: 44px; height: 44px; }
     .dock-btn .lb { font-size: 11px; }
     .sheet { top: auto; bottom: 0; width: 100%; max-height: 90%; border-radius: 28px 28px 0 0; transform: translate(-50%, 40px); padding-bottom: env(safe-area-inset-bottom); }
-    .urusetia-card { flex-direction: column; align-items: stretch; gap: 12px; } /* Stack on small screens for long names */
+    .urusetia-card { flex-direction: column; align-items: stretch; gap: 12px; }
     .urusetia-card .info { margin-right: 0; text-align: center; }
     .wa-btn { justify-content: center; }
   }
@@ -268,10 +268,9 @@
           <div class="sub">Tentatif rasmi sepanjang program berlangsung</div>
         </div>
         <div class="tabs" role="tablist">
-          <button class="tab" role="tab" aria-selected="true" data-day="d1">26 Okt · Pengurusan</button>
-          <button class="tab" role="tab" aria-selected="false" data-day="d2">27 Okt · Teknikal</button>
-          <button class="tab" role="tab" aria-selected="false" data-day="d3">28 Okt · Pembangunan</button>
-          <button class="tab" role="tab" aria-selected="false" data-day="d4">Inovasi &amp; Kreativiti</button>
+          <button class="tab" role="tab" aria-selected="true" data-day="d1">26 Okt</button>
+          <button class="tab" role="tab" aria-selected="false" data-day="d2">27 Okt</button>
+          <button class="tab" role="tab" aria-selected="false" data-day="d3">28 Okt</button>
         </div>
       </div>
 
@@ -336,6 +335,7 @@
       <div class="day" id="d3" role="tabpanel">
         <ol class="tl">
           <li><div class="time">8.00 – 8.30 pagi</div><div class="what">Minum pagi</div></li>
+          
           <li class="key">
             <div class="time">8.30 – 11.30 pagi</div>
             <div class="box">
@@ -349,12 +349,7 @@
               </ul>
             </div>
           </li>
-        </ol>
-      </div>
 
-      <!-- Hari 4 -->
-      <div class="day" id="d4" role="tabpanel">
-        <ol class="tl">
           <li class="key">
             <div class="time">11.30 – 1.00 petang</div>
             <div class="box">
@@ -367,6 +362,7 @@
               </ul>
             </div>
           </li>
+
           <li><div class="time">1.00 petang</div><div class="what">Makan tengah hari &amp; solat</div></li>
         </ol>
       </div>
@@ -678,4 +674,3 @@ var URUSETIA = [
 </script>
 </body>
 </html>
-
